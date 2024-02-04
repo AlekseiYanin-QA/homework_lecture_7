@@ -8,7 +8,6 @@ def test_users_csv(create_archive):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
         names = [row['Username'] for row in reader]
-        print(names)
 
 def test_xlsx_file(create_archive):
     path = os.path.join(create_archive, 'file_example_XLSX_50.xlsx')
